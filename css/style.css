@@ -154,6 +154,30 @@ legend {
 .primary-btn:hover{
     background: #3C567B;
 }
+li a{
+    opacity: 70%;
+    color: black;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+li a:hover{
+    opacity: 100%;
+    color: #2E4E92;
+}
+li a:after {
+    display: block;
+    left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+    width: 0;/*задаём длинну линии до наведения курсора*/
+    height: 2px; /*задаём ширину линии*/
+    background-color: #2E4E92; /*задаём цвет линии*/
+    content: "";
+    transition: width 0.3s ease-out; /*задаём время анимации*/
+}
+
+li a:hover:after,
+li a:focus:after {
+    width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}
 .line {
     width: 56px;
     background: #000000;
@@ -216,8 +240,12 @@ legend {
     font-weight: 700;
     font-size: 18px;
     line-height: 50px;
+    transition: all 0.4s;
 }
-
+.main-btn:hover{
+    color: #FFF;
+    background: #458FF6;
+}
 .text-1 {
     display: flex;
     align-content: center;
